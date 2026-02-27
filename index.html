@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SAKATHON '26 · S.A Engineering College</title>
-  <link rel="icon" type="image/png" href="logo/title.png">
+  <title>SA-HACKATHON '26 · S.A Engineering College</title>
+  <link rel="icon" type="image/png" href="logo/logo-final.png">
   <!-- fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cinzel:wght@400;600;900&family=Inter:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
   <style>
@@ -289,7 +289,7 @@
 
     .hero-title {
       font-family: 'Bebas Neue', sans-serif;
-      font-size: clamp(5rem, 15vw, 12rem);
+      font-size: clamp(4rem, 15vw, 12rem);
       line-height: 0.88;
       letter-spacing: 0.04em;
       color: var(--white);
@@ -1314,11 +1314,44 @@
     }
 
     .sponsors-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 24px;
-      justify-content: center;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
       margin-top: 48px;
+    }
+
+    /* Make Hexaware span full row */
+    .sponsors-grid .sponsor-card:first-of-type {
+      grid-column: 1 / -1;
+    }
+
+    /* Make first sponsor full width */
+    .sponsors-grid .sponsor-card:first-of-type {
+      flex: 0 0 100%;
+      max-width: 100%;
+      margin-bottom: 60px;
+
+      /* Center content perfectly */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Make inner wrapper take full width and center text */
+    .sponsors-grid .sponsor-card:first-of-type > div {
+      width: 100%;
+      text-align: center;
+    }
+
+    /* Ensure sponsor name & badge are centered */
+    .sponsors-grid .sponsor-card:first-of-type .sponsor-name,
+    .sponsors-grid .sponsor-card:first-of-type .sponsor-badge {
+      text-align: center;
+    }
+
+    .sponsors-grid .sponsor-card:first-of-type .sponsor-name {
+      font-size: 2.5rem;
+      color: var(--gold);
     }
 
     .sponsor-card {
@@ -1396,6 +1429,8 @@
       color: var(--gold);
       border-color: var(--gold);
     }
+
+   
 
     /* ----- FOOTER ----- */
     footer {
@@ -1587,7 +1622,7 @@
 <nav>
   <div class="nav-left">
     <img src="logo/logo_saec.png" class="nav-logo-img" alt="College Logo">
-    <div class="nav-logo">SAKATHON</div>
+    <div class="nav-logo">SA-HACKATHON</div>
   </div>
 
   <ul class="nav-links">
@@ -1617,7 +1652,7 @@
     Organised by SA Engineering College in association with<br>
     <span class="hero-partner">Hexaware</span><br>PRESENTS
   </div>
-  <h1 class="hero-title"><span>SAKATHON '26</span></h1>
+  <h1 class="hero-title"><span>SA-HACKATHON '26</span></h1>
   <div class="hero-year">"ENGINEERING A SUSTAINABLE WORLD"</div>
   <div class="hero-divider"></div>
   <div class="hero-subtitle">36 Hours of Innovation, Code & Glory</div>
@@ -1650,8 +1685,8 @@
 <section id="about">
   <div class="container">
     <div class="section-label" style="justify-content:center;">About the Event</div>
-    <h2 class="section-title">WHAT IS <span class="gold">SAKATHON</span>?</h2>
-    <p class="section-desc">SAKATHON '26 is S.A Engineering College's premier hackathon — a 36-hour sprint of creativity, collaboration, and cutting-edge technology. Build solutions that matter. Compete. Network. Innovate.</p>
+    <h2 class="section-title">WHAT IS <span class="gold">SA-HACKATHON</span>?</h2>
+    <p class="section-desc">SA-HACKATHON '26 is S.A Engineering College's premier hackathon — a 36-hour sprint of creativity, collaboration, and cutting-edge technology. Build solutions that matter. Compete. Network. Innovate.</p>
     <h2 class="section-title" style="margin-top:40px;font-size: 2rem;">HACKATHON <span class="gold">DOMAINS</span></h2>
     <div class="about-grid reveal">
 
@@ -1747,7 +1782,7 @@
       <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-content"><div class="timeline-date">25 March 2026 — 09:00 AM</div><div class="timeline-event">Hackathon Round 1 (PPT Submission) Begins</div><div class="timeline-detail">Inauguration, team check-in, problem statement reveal.<br>In the first round, teams must prepare and present a PowerPoint (PPT) explaining their idea, approach, and proposed solution. Only the shortlisted teams from this round will qualify and move on to the second round of the hackathon.</div></div></div>
       <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-content"><div class="timeline-date">25–26 March 2026</div><div class="timeline-event">Hackathon Round 2 (Prototype Development)</div><div class="timeline-detail">Shortlisted teams from Round 1 will move to the second round, where they will build a working prototype based on their selected domain and the idea presented in their PPT. Teams must develop, test, and refine their solution within the given time and submit the final prototype for evaluation by the judges.</div></div></div>
       <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-content"><div class="timeline-date">26 March 2026 — 06:00 PM</div><div class="timeline-event">Final Presentations</div><div class="timeline-detail">Present your project to a distinguished panel of judges. Make it count — you have 5 minutes to impress.</div></div></div>
-      <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-content"><div class="timeline-date">26 March 2026 — 08:00 PM</div><div class="timeline-event">Winners Announced</div><div class="timeline-detail">Closing ceremony, prize distribution, and celebration. SAKATHON '26 goes into the history books.</div></div></div>
+      <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-content"><div class="timeline-date">26 March 2026 — 08:00 PM</div><div class="timeline-event">Winners Announced</div><div class="timeline-detail">Closing ceremony, prize distribution, and celebration. SA-HACKATHON '26 goes into the history books.</div></div></div>
     </div>
   </div>
 </section>
@@ -1783,7 +1818,7 @@
   <div class="countdown-bg"></div>
   <div class="container">
     <div class="section-label" style="justify-content:center;">Time Remaining</div>
-    <h2 class="section-title">COUNTDOWN TO <span class="gold">SAKATHON</span></h2>
+    <h2 class="section-title">COUNTDOWN TO <span class="gold">SA-HACKATHON</span></h2>
     <p class="section-desc">The clock is ticking. Register before slots run out.</p>
     <div class="countdown-grid">
       <div class="countdown-block"><div class="countdown-num" id="days">00</div><div class="countdown-label">Days</div></div>
@@ -1801,7 +1836,7 @@
   <div class="container">
     <div class="section-label" style="justify-content:center;">Join Us</div>
     <h2 class="section-title">READY TO <span class="gold">HACK</span>?</h2>
-    <p class="section-desc">Register your team for SAKATHON '26 and be part of something legendary.</p>
+    <p class="section-desc">Register your team for SA-HACKATHON '26 and be part of something legendary.</p>
     <div class="register-inner reveal">
       <!-- Left info -->
       <div class="register-info">
@@ -1843,14 +1878,83 @@
       <div class="coord-card"><div class="coord-avatar">AM</div><div class="coord-name">SARANG M</div><div class="coord-role">OVERALL CO-ORDINATOR</div><div class="coord-contact">+91 72003 81327</div></div>
       <div class="coord-card"><div class="coord-avatar">MA</div><div class="coord-name">MAANISHA</div><div class="coord-role">TECHNICAL LEAD</div><div class="coord-contact">+91 73055 49492</div></div>
       <div class="coord-card"><div class="coord-avatar">RS</div><div class="coord-name">RAHUL S</div><div class="coord-role">TECHNICAL LEAD</div><div class="coord-contact">+91 63850 38644</div></div>
+      <div class="coord-card">
+      <div class="coord-avatar">SS</div>
+      <div class="coord-name">SANJAY SAI NATHAN L</div>
+      <div class="coord-role">STUDENT COORDINATOR</div>
+      <div class="coord-contact">+91 70108 38755</div>
     </div>
 
-    <div class="coord-section-label">— Faculty Coordinators —</div>
-    <div class="coordinators-grid reveal">
-      <div class="coord-card"><div class="coord-avatar">MA</div><div class="coord-name">MANI A</div><div class="coord-role">Staff Coordinator</div><div class="coord-contact">S.A Engineering College</div></div>
-      <div class="coord-card"><div class="coord-avatar">MY</div><div class="coord-name">MUTHUKUMARASAMY</div><div class="coord-role">Staff Coordinator</div><div class="coord-contact">S.A Engineering College</div></div>
+    <div class="coord-card">
+      <div class="coord-avatar">PS</div>
+      <div class="coord-name">PREETHI SURESH KUMAR</div>
+      <div class="coord-role">STUDENT COORDINATOR</div>
+      <div class="coord-contact">+91 90252 59330</div>
     </div>
-  </div>
+
+    <div class="coord-card">
+      <div class="coord-avatar">HS</div>
+      <div class="coord-name">HARSHAVARTHINI S</div>
+      <div class="coord-role">STUDENT COORDINATOR</div>
+      <div class="coord-contact">+91 73387 24110</div>
+    </div>
+
+    <div class="coord-card">
+      <div class="coord-avatar">SK</div>
+      <div class="coord-name">SABARISH K</div>
+      <div class="coord-role">STUDENT COORDINATOR</div>
+      <div class="coord-contact">+91 72001 31292</div>
+    </div>
+
+    <div class="coord-card">
+      <div class="coord-avatar">SK</div>
+      <div class="coord-name">SIVA KAVITHA K</div>
+      <div class="coord-role">STUDENT COORDINATOR</div>
+      <div class="coord-contact">+91 78128 22021</div>
+    </div>
+
+    <div class="coord-card">
+      <div class="coord-avatar">RC</div>
+      <div class="coord-name">RAJESHWARI C</div>
+      <div class="coord-role">STUDENT COORDINATOR</div>
+      <div class="coord-contact">+91 97898 08660</div>
+    </div>
+
+    <div class="coord-card">
+      <div class="coord-avatar">AJ</div>
+      <div class="coord-name">AUGUSTIN JACCOB E H</div>
+      <div class="coord-role">STUDENT COORDINATOR</div>
+      <div class="coord-contact">+91 72007 54610</div>
+    </div>
+
+    <div class="coord-card">
+      <div class="coord-avatar">RJ</div>
+      <div class="coord-name">RETHIKA J R</div>
+      <div class="coord-role">STUDENT COORDINATOR</div>
+      <div class="coord-contact">+91 63798 50903</div>
+    </div>
+
+    <div class="coord-card">
+      <div class="coord-avatar">AN</div>
+      <div class="coord-name">ARUNDHATHI N B</div>
+      <div class="coord-role">STUDENT COORDINATOR</div>
+      <div class="coord-contact">+91 98414 09510</div>
+    </div>
+
+    <div class="coord-card">
+      <div class="coord-avatar">PR</div>
+      <div class="coord-name">PARAMESH R I</div>
+      <div class="coord-role">STUDENT COORDINATOR</div>
+      <div class="coord-contact">+91 63747 08404</div>
+    </div>
+        </div>
+
+        <div class="coord-section-label">— Faculty Coordinators —</div>
+        <div class="coordinators-grid reveal">
+          <div class="coord-card"><div class="coord-avatar">MA</div><div class="coord-name">MANI A</div><div class="coord-role">Staff Coordinator</div><div class="coord-contact">S.A Engineering College</div></div>
+          <div class="coord-card"><div class="coord-avatar">MY</div><div class="coord-name">MUTHUKUMARASAMY</div><div class="coord-role">Staff Coordinator</div><div class="coord-contact">S.A Engineering College</div></div>
+        </div>
+      </div>
 </section>
 
 <!-- SPONSORS -->
@@ -1861,10 +1965,18 @@
     <p class="section-desc">Backed by industry leaders who believe in the next generation of builders.</p>
     <div class="sponsors-grid reveal">
       <div class="sponsor-card"><div><div class="sponsor-name">HEXAWARE</div><div class="sponsor-badge">Title Sponsor</div></div></div>
-      <div class="sponsor-card" style="border-style:dashed; opacity:0.5;"><div><div class="sponsor-name" style="font-size:1.2rem; color:rgba(240,237,230,0.3);">Your Brand Here</div><div class="sponsor-badge">Become a Sponsor</div></div></div>
+      
+      <div class="sponsor-card"><div><div class="sponsor-name">MEPRO PEARSON</div><div class="sponsor-badge">Associate Sponsor</div></div></div>
+      <div class="sponsor-card"><div><div class="sponsor-name">FACE PREP</div><div class="sponsor-badge">Associate Sponsor</div></div></div>
+      <div class="sponsor-card"><div><div class="sponsor-name">WEBZENITH SOLUTIONS</div><div class="sponsor-badge">Associate Sponsor</div></div></div>
+      <div class="sponsor-card"><div><div class="sponsor-name">APTITUDE BUSTER</div><div class="sponsor-badge">Associate Sponsor</div></div></div>
+      <div class="sponsor-card"><div><div class="sponsor-name">WEBILESK INFOTECH</div><div class="sponsor-badge">Associate Sponsor</div></div></div>
+      <div class="sponsor-card"><div><div class="sponsor-name">SKILL RACK</div><div class="sponsor-badge">Associate Sponsor</div></div></div>
+      
     </div>
+    
     <!--<div style="text-align:center; margin-top:32px;">
-      <a href="mailto:sakathon@saec.ac.in" class="become-sponsor">Become a Sponsor → Contact Us</a>
+      <a href="mailto:SA-HACKATHON@saec.ac.in" class="become-sponsor">Become a Sponsor → Contact Us</a>
     </div>-->
   </div>
 </section>
@@ -1874,7 +1986,7 @@
   <div class="container">
     <div class="footer-inner">
       <div class="footer-brand">
-        <div class="footer-logo">SAKATHON '26</div>
+        <div class="footer-logo">SA-HACKATHON '26</div>
         <div class="footer-college">S.A Engineering College</div>
         <div class="footer-tagline">36 hours of innovation, code, and glory. Build the future, one hack at a time.</div>
       </div>
@@ -1890,7 +2002,7 @@
       </div>
       <div class="footer-contact">
         <div class="footer-contact-title">Contact Us</div>
-        <div class="footer-contact-item"><span>📧</span> sakathon@saec.ac.in</div>
+        <div class="footer-contact-item"><span>📧</span> SA-HACKATHON@saec.ac.in</div>
         <div class="footer-contact-item">
           <span>📍</span>
           <a href="https://maps.google.com/?q=SA+Engineering+College+Chennai"
@@ -1906,7 +2018,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <div class="footer-copy">© 2026 <span>SAKATHON</span> — S.A Engineering College. All rights reserved.</div>
+      <div class="footer-copy">© 2026 <span>SA-HACKATHON</span> — S.A Engineering College. All rights reserved.</div>
     </div>
   </div>
 </footer>
