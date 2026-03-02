@@ -1185,15 +1185,7 @@
          /* ============================= */
          /*         MOBILE FIX           */
          /* ============================= */
-         @media (max-width: 768px) {
-         .coordinators-grid {
-         grid-template-columns: 1fr;   /* One card per row */
-         }
-         .coord-card {
-         min-height: auto;
-         padding: 28px 20px;
-         }
-         }
+         
          /* ============================= */
          /*         POWERED BY           */
          /* ============================= */
@@ -1245,16 +1237,7 @@
          /* ============================= */
          /*         RESPONSIVE           */
          /* ============================= */
-         @media (max-width: 768px) {
-         .sponsor-card {
-         min-height: 110px;
-         padding: 30px 15px;
-         }
-         .sponsor-card img {
-         width: 130px;
-         height: 50px;
-         }
-         }
+         
          /* ----- FOOTER ----- */
          footer {
          background: var(--black2);
@@ -1367,49 +1350,8 @@
          transform: translateY(0);
          }
          /* ----- RESPONSIVE ----- */
-         @media (max-width: 900px) {
-         nav { padding: 16px 24px; }
-         .nav-links { display: none; }
-         .container { padding: 0 24px; }
-         .about-grid { grid-template-columns: 1fr 1fr; }
-         .highlights-grid { grid-template-columns: 1fr 1fr; }
-         .register-inner { grid-template-columns: 1fr; }
-         .mentors-grid { grid-template-columns: repeat(2, 1fr); }
-         .coordinators-grid { grid-template-columns: repeat(2, 1fr); }
-         .stat-item { padding: 20px 30px; }
-         .prizes-wrap { gap: 16px; }
-         .prize-card.first { transform: none; }
-         .footer-inner { flex-direction: column; }
-         .hero-logo { width: 80px; opacity: 0.6; }
-         }
-         @media (max-width: 768px) {
-         nav{padding: 12px 16px;}
-         .nav-logo{font-size: 1.1rem;}
-         .nav-logo-img{height: 28px;}
-         .nav-important{padding: 8px 20px; font-size: 0.65rem;}
-         .nav-cta{padding: 8px 20px; font-size: 0.65rem;}
-         .about-grid { grid-template-columns: 1fr; }
-         .highlights-grid { grid-template-columns: 1fr; }
-         .mentors-grid { grid-template-columns: repeat(2, 1fr); }
-         .coordinators-grid { grid-template-columns: 1fr; }
-         .countdown-block { padding: 20px 20px; }
-         .hero-meta { gap: 24px; }
-         .stat-item { border-right: none; border-bottom: 1px solid rgba(212,160,23,0.2); }
-         .stat-item:last-child { border-bottom: none; }
-         .stats-inner { flex-direction: column; }
-         .register-gform-card { padding: 40px 28px; }
-         .hero-logo {
-         width: 60px;              /* smaller size */
-         top: 50%;                 /* keep vertical center */
-         transform: translateY(-50%);
-         }
-         .hero-logo-left {
-         left: 20px;               /* reduce side spacing */
-         }
-         .hero-logo-right {
-         right: 20px;
-         }
-         }
+         
+         
          .hero-partner {
          font-size: 1.4em;       /* increase size */
          color: var(--gold-light);     /* optional: make it gold */
@@ -1499,6 +1441,254 @@
           text-transform: uppercase;
           text-shadow: 0 0 12px rgba(255,255,255,0.35);
         }
+
+        /* ================================================= */
+/* =============== NAV HAMBURGER =================== */
+/* ================================================= */
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 24px;
+  height: 2px;
+  background: var(--gold);
+  transition: all 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translateY(7px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translateY(-7px);
+}
+
+/* ================================================= */
+/* =============== MOBILE MENU ===================== */
+/* ================================================= */
+
+.mobile-menu {
+  position: fixed;
+  top: 70px;
+  left: 0;
+  right: 0;
+  background: var(--black2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  padding: 40px 0;
+  transform: translateY(-120%);
+  transition: transform 0.4s ease;
+  z-index: 999;
+}
+
+.mobile-menu.active {
+  transform: translateY(0);
+}
+
+.mobile-menu a {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.9rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--white);
+  text-decoration: none;
+}
+
+.mobile-menu a:hover {
+  color: var(--gold);
+}
+
+/* ================================================= */
+/* ================= TABLET ======================== */
+/* ================================================= */
+
+@media (max-width: 1024px) {
+
+  .container {
+    padding: 0 24px;
+  }
+
+  nav {
+    padding: 14px 24px;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .mentors-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .coordinators-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .register-inner {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+/* ================================================= */
+/* ================= MOBILE ======================== */
+/* ================================================= */
+
+@media (max-width: 768px) {
+
+  html, body {
+    overflow-x: hidden;
+  }
+
+  nav {
+    padding: 12px 16px;
+  }
+
+  .nav-logo-img {
+    height: 26px;
+  }
+
+  .nav-logo {
+    font-size: 1rem;
+  }
+
+  .nav-right {
+  display: none; /* hide buttons only */
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.partner-logo {
+  margin-left: auto;
+  margin-right: 12px;
+}
+
+.partner-logo {
+  height: 26px;
+}
+
+  /* HERO TYPOGRAPHY SCALING */
+  .hero-title {
+    white-space: normal;
+    font-size: clamp(2.2rem, 8vw, 3.2rem);
+    line-height: 1.1;
+  }
+
+  .hero-year {
+    font-size: clamp(0.9rem, 3vw, 1.2rem);
+  }
+
+  .hero-meta {
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .meta-sep {
+    display: none;
+  }
+
+  .hero-btns {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+  }
+
+  .hero-logo {
+    display: none;
+  }
+
+  /* SINGLE COLUMN FIXES */
+  .about-grid,
+  .coordinators-grid,
+  .register-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .highlights-grid {
+    flex-direction: column;
+  }
+
+  /* STATS */
+  .stats-inner {
+    flex-direction: column;
+  }
+
+  .stat-item {
+    border-right: none;
+    border-bottom: 1px solid rgba(212,160,23,0.2);
+    padding: 20px 0;
+  }
+
+  .stat-item:last-child {
+    border-bottom: none;
+  }
+
+  /* COUNTDOWN */
+  .countdown-grid {
+    flex-direction: column;
+  }
+
+  .countdown-block::after {
+    display: none;
+  }
+
+  /* SPONSORS 2-COLUMN MOBILE */
+  .sponsors-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .sponsor-card {
+    min-height: 110px;
+    padding: 24px 12px;
+  }
+
+  .sponsor-card img {
+    width: 110px;
+    height: 45px;
+  }
+
+  /* FOOTER */
+  .footer-inner {
+    flex-direction: column;
+    gap: 32px;
+  }
+
+}
+
+.partner-logo {
+  height: 34px;
+  width: auto;
+  object-fit: contain;
+}
+
       </style>
    </head>
    <body>
@@ -1506,28 +1696,51 @@
       <div class="cursor-ring" id="cursorRing"></div>
       <!-- NAV -->
       <nav>
-         <div class="nav-left">
-            <img src="logo/logo_saec.png" class="nav-logo-img" alt="College Logo">
-            <div class="nav-logo">SA-HACKATHON</div>
-         </div>
-         <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#timeline">Timeline</a></li>
-            <li><a href="#prizes">Prizes</a></li>
-            <li><a href="#sponsors">Sponsors</a></li>
-         </ul>
-         <div class="nav-right">
-            <img src="logo/hexaware.jpeg" class="nav-logo-img" alt="Partner Logo">
-            <button class="nav-important"
-               onclick="document.getElementById('resources').scrollIntoView({behavior:'smooth'})">
+      <div class="nav-left">
+         <img src="logo/logo_saec.png" class="nav-logo-img" alt="College Logo">
+         <div class="nav-logo">SA-HACKATHON</div>
+      </div>
+
+      <!-- Desktop Links -->
+      <ul class="nav-links">
+         <li><a href="#about">About</a></li>
+         <li><a href="#timeline">Timeline</a></li>
+         <li><a href="#prizes">Prizes</a></li>
+         <li><a href="#sponsors">Sponsors</a></li>
+      </ul>
+      
+      <img src="logo/hexaware.jpeg" class="partner-logo" alt="Hexaware">
+
+      <!-- Hamburger -->
+      <div class="hamburger" id="hamburger">
+         <span></span>
+         <span></span>
+         <span></span>
+      </div>
+
+      <div class="nav-right">
+      
+         <button class="nav-important"
+            onclick="document.getElementById('resources').scrollIntoView({behavior:'smooth'})">
             Resources
-            </button>
-            <button class="nav-cta"
-               onclick="document.getElementById('register').scrollIntoView({behavior:'smooth'})">
+         </button>
+         <button class="nav-cta"
+            onclick="document.getElementById('register').scrollIntoView({behavior:'smooth'})">
             Register
-            </button>
-         </div>
+         </button>
+      </div>
+      
       </nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#about">About</a>
+  <a href="#timeline">Timeline</a>
+  <a href="#prizes">Prizes</a>
+  <a href="#sponsors">Sponsors</a>
+  <a href="#resources">Resources</a>
+  <a href="#register">Register</a>
+</div>
       <!-- HERO -->
       <section id="hero">
          <div class="hero-bg"></div>
@@ -1869,7 +2082,7 @@
                   <div class="gform-title">Slots Are Filling Fast</div>
                   <p class="gform-text">Click below to open the official registration form. Takes less than 2 minutes — secure your spot before it's too late.</p>
                   <div class="gform-btn-wrap">
-                     <a href="https://docs.google.com/forms/d/e/1FAIpQLScRZIOuoufsVUKUrgaR1cwgGbOC-j96YMRWPYjfFYZ_b3f_Qg/viewform" target="_blank" class="btn-primary">Register via Google Forms →</a>
+                     <a href="https://forms.gle/jjRfUiHygzCEstpb7" target="_blank" class="btn-primary">Register via Google Forms →</a>
                   </div>
                   <div class="gform-note">Registration open to all college students</div>
                </div>
@@ -2001,13 +2214,17 @@
             <div class="coord-subtitle">Faculty Coordinators</div>
             <div class="coordinators-grid reveal">
                <div class="coord-card">
-                  <div class="coord-avatar">MA</div>
+                  <div class="coord-avatar">
+                     <img src="images/mani.png" alt="Mani A">
+                  </div>
                   <div class="coord-name">Mr MANI A</div>
                   <div class="coord-role">ASSOCIATE PROFESSOR - CSE DEPARTMENT</div>
                   <div class="coord-contact">S.A Engineering College</div>
                </div>
                <div class="coord-card">
-                  <div class="coord-avatar">MY</div>
+                  <div class="coord-avatar">
+                     <img src="images/muthukumarasamy.png" alt="Muthukumarasamy S">
+                  </div>
                   <div class="coord-name">Mr MUTHUKUMARASAMY S</div>
                   <div class="coord-role">ASSOCIATE PROFESSOR - CSE DEPARTMENT</div>
                   <div class="coord-contact">S.A Engineering College</div>
@@ -2090,6 +2307,16 @@
          </div>
       </footer>
       <script>
+
+         // Hamburger Toggle
+         const hamburger = document.getElementById('hamburger');
+         const mobileMenu = document.getElementById('mobileMenu');
+
+         hamburger.addEventListener('click', () => {
+         hamburger.classList.toggle('active');
+         mobileMenu.classList.toggle('active');
+         });
+
          // custom cursor
          const cursor = document.getElementById('cursor');
          const cursorRing = document.getElementById('cursorRing');
